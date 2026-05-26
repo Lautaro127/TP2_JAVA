@@ -2,7 +2,7 @@ package ejercicio1;
 
 import java.time.LocalDate;
 
-public class Empleado extends Persona{
+public class Empleado extends Persona implements Comparable<Empleado>{
 	private static int legajoContador = 999;
 	private final int legajo;
 	private String puesto;
@@ -28,6 +28,13 @@ public class Empleado extends Persona{
 	@Override
 	public String toString() {
 	    return super.toString() + "\n" + "Legajo: " + legajo + "\n" + "Puesto: " + puesto;
+	}
+
+	@Override
+	public int compareTo(Empleado o) {
+			
+		//Sin lógica (el TP no lo requería)
+		return 1;
 	}
 
 	
