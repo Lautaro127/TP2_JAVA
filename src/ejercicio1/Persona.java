@@ -96,7 +96,29 @@ public class Persona {
 	           "Teléfono: " + telefono + "\n" +
 	           "Email: " + email;
 	}
-
+	
+	
+	
+	public static void exVerificarDNI(String dni) throws ExVerificarDNI {
+		int contador = 0;
+		char[] listaNumeros = {'1', '2', '3', '4', '5', '6', '7', '8', '9', '0'};
+		
+		for(int i = 0; i < dni.length();i++) {
+			for(int q = 0; q < 10;q++) {
+				if(dni.charAt(i) == listaNumeros[q]) {
+					contador++;
+				}
+			}
+		}
+		
+		if(contador != 8) {
+			System.out.println("El DNI es incorrecto");
+			ExVerificarDNI c = new ExVerificarDNI();
+			throw c;
+		}else {
+			System.out.println("El DNI es valido");
+		}
+	}
 	
 	
 	
