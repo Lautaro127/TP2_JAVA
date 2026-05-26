@@ -3,7 +3,7 @@ package ejercicio1;
 import java.time.LocalDate;
 
 public class Empleado extends Persona{
-	 private static int legajoContador = 999;
+	private static int legajoContador = 999;
 	private final int legajo;
 	private String puesto;
 	
