@@ -2,6 +2,7 @@ package ejercicio1;
 
 import java.time.LocalDate;
 import java.util.ArrayList;
+import java.util.ListIterator;
 
 public class MainEjercicio1_b {
 
@@ -20,7 +21,10 @@ public class MainEjercicio1_b {
 		listaEmpleados.add(e4);
 		listaEmpleados.add(e5);
 		
-		for (Empleado empleado : listaEmpleados) {
+		ListIterator<Empleado> iterator = listaEmpleados.listIterator();
+		
+		while(iterator.hasNext()) {
+			Empleado empleado = iterator.next();
 			System.out.println(empleado.toString());
 			System.out.println();
 		}
